@@ -3,9 +3,151 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="theme-color" content="#f7f8f5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pascal Hägele | Portfolio</title>
   </head>
   <body>
-    
+    <header class="site-header page-width">
+      <a class="name" href="#top">Pascal Hägele</a>
+    </header>
+
+    <main id="top" class="page-width">
+      <section class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Game programming &amp; <span>graphics.</span></h1>
+        <p class="intro-copy">I’m a student in Games & Immersive Media interested in gameplay systems and graphics. This portfolio highlights some of my college projects and contributions.</p>
+      </section>
+
+      <section id="projects" class="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">College Projects &amp; Assignments</h2>
+        </div>
+        <div class="project-grid">
+
+          <article class="project">
+            <iframe class="project-video" src="https://drive.google.com/file/d/1BH2yI-1JRRtFcxLXRstg-6q2Wn6fNiyN/preview" title="Computer Graphics Assignment video" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="project-info">
+              <h3>Computer Graphics Assignment</h3>
+              <a class="text-link" href="https://github.com/PascalHaegele/Code3" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <dl class="project-details">
+                <div><dt>Team size</dt><dd>1</dd></div>
+                <div><dt>My role</dt><dd>Programming</dd></div>
+                <div><dt>Duration</dt><dd>3 Days</dd></div>
+                <div><dt>Engine</dt><dd>Godot</dd></div>
+                <div><dt>Languages</dt><dd>C#/GDShader</dd></div>
+              </dl>
+              <div class="contribution">
+                <h4>My contribution</h4>
+                <p>A script that procedurally generates the following meshes with adjustable radius and resolution:</p>
+                <ul>
+                  <li>Plane: a square grid of quads on the xz-plane, with separate vertices for each quad</li>
+                  <li>Shared Plane: like the Plane, but neighboring quads share vertices</li>
+                  <li>UVSphere: uses the Shared Plane as a base, arranging vertices in circles around the center</li>
+                  <li>CubeSphere: a cube using a Shared Plane for each side, normalizing the position of each vertex so all are the same distance from the center</li>
+                  <li>Torus: a UVSphere that is pulled apart making a hole in the center, and arranging the vertices in a ring around the radius circle</li>               
+                </ul>
+                <p>Three Shaders which can be applied to the generated Meshes for different effects:</p>
+                <ul>
+                  <li>Waves: displaces vertices along their normals to create a wave-like pattern.</li>
+                  <li>Ripple: like Waves, but with a ripple pattern; frequency and displacement are adjustable for both shaders.</li>
+                  <li>Dissolve: cuts out part of the mesh, creating a colored edge shaped by noise.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <iframe class="project-video" src="https://drive.google.com/file/d/157bTGHb0bR5RGNLjDfiwwhdn1VKZ5Aoi/preview" title="Game Prototype video" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="project-info">
+              <h3>Game Prototype: Gothica Solaris</h3>
+              <a class="text-link" href="https://github.com/PascalHaegele/Project3" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a>
+              <div class="project-description">
+                <p>Gothica Solaris is a first-person roguelite dungeon crawler set in a dark Victorian world where reality is collapsing under the influence of a forbidden Book. Players control Victor, a bounty hunter searching for a missing loved one while exploring corrupted realms.</p>
+                <p>Its risk-versus-reward system centers on an Insanity Meter: rising Insanity strengthens enemies and destabilizes the environment, but can reveal hidden paths, events, and rewards. Players decide whether to keep exploring or extract safely, collecting Pages and currencies to unlock permanent upgrades in the Mirror Hub. Weapons, Page combinations, Socket upgrades, and abilities support varied builds and replayability.</p>
+              </div>
+              <dl class="project-details">
+                <div><dt>Team size</dt><dd>4</dd></div>
+                <div><dt>My role</dt><dd>Programming</dd></div>
+                <div><dt>Duration</dt><dd>6 Weeks</dd></div>
+                <div><dt>Engine</dt><dd>Godot</dd></div>
+                <div><dt>Languages</dt><dd>C#</dd></div>
+              </dl>
+              <div class="contribution">
+                <h4>My contribution</h4>
+                <p>Gameplay systems and features:</p>
+                <ul>
+                  <li>State Machine System allowing for custom states and transitions</li>
+                  <li>Behavior Tree System to control AI-NPCs with custom behaviors</li>
+                  <li>AI NPC detection by sight and sound</li>
+                  <li>Component System for reusable character functionality</li>
+                  <li>Player Controller and First-Person Camera</li>
+                  <li>Player-Weapons with projectiles and ammunition</li>
+                  <li>Hit- and Hurtbox</li>
+                  <li>Item Pickups and Player Inventory</li>
+                  <li>Interaction with environment objects, such as chests</li>
+                  <li>Main and Pause Menu</li>
+                  <li>Altars that give the player effects on interaction</li>
+                  <li>Portals which transport the player to other levels or locations</li>
+                  <li>Level-design tools including enemy spawners, triggered traps, and portal placement</li>
+                </ul>
+                <p>Visuals:</p>
+                <ul>
+                  <li>Player HUD</li>
+                  <li>Skybox textures and shader</li>
+                  <li>Outline shader for enemies and interactable objects</li>
+                  <li>Dissolve shader for defeated enemies</li>
+                  <li>Textures for muzzle flashes and projectile impacts</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Programming Languages</h3>
+            <ul class="skills">
+              <li>C#</li>
+              <li>C</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Engines</h3>
+            <ul class="skills">
+              <li>Godot</li>
+              <li>Unity</li>
+              <li>Unreal</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Other Tools</h3>
+            <ul class="skills">
+              <li>Blender</li>
+              <li>Git</li>
+              <li>FMod</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="page-width footer-inner">
+        <div class="footer-links">
+          <a class="text-link" href="mailto:passi0401@gmail.com">passi0401@gmail.com <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/PascalHaegele" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
